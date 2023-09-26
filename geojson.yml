@@ -18,7 +18,7 @@ info:
           required:
            - type
            - features
-           
+    
       SpecificFeature:
         allOf:
         - $ref: "path_to_spec#/components/schemas/MultiPolygonFeature"
@@ -174,12 +174,15 @@ components:
       required:
         - type
         - coordinates
-        
+    
     PointFeature:
       type: object
       properties:
         type:
-          $ref: "#/components/schemas/FeatureType"
+          type: string
+          enum:
+            - Feature
+          default: Feature
         geometry:
           $ref: "#/components/schemas/Point"
       required:
@@ -190,7 +193,10 @@ components:
       type: object
       properties:
         type:
-          $ref: "#/components/schemas/FeatureType"
+          type: string
+          enum:
+            - Feature
+          default: Feature
         geometry:
           $ref: "#/components/schemas/MultiPoint"
       required:
@@ -201,7 +207,10 @@ components:
       type: object
       properties:
         type:
-          $ref: "#/components/schemas/FeatureType"
+          type: string
+          enum:
+            - Feature
+          default: Feature
         geometry:
           $ref: "#/components/schemas/LineString"
       required:
@@ -212,7 +221,10 @@ components:
       type: object
       properties:
         type:
-          $ref: "#/components/schemas/FeatureType"
+          type: string
+          enum:
+            - Feature
+          default: Feature
         geometry:
           $ref: "#/components/schemas/MultiLineString"
       required:
@@ -223,7 +235,10 @@ components:
       type: object
       properties:
         type:
-          $ref: "#/components/schemas/FeatureType"
+          type: string
+          enum:
+            - Feature
+          default: Feature
         geometry:
           $ref: "#/components/schemas/Polygon"
       required:
@@ -234,7 +249,10 @@ components:
       type: object
       properties:
         type:
-          $ref: "#/components/schemas/FeatureType"
+          type: string
+          enum:
+            - Feature
+          default: Feature
         geometry:
           $ref: "#/components/schemas/MultiPolygon"
       required:
