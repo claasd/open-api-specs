@@ -41,7 +41,12 @@ info:
           someFlag:
             type: boolean
       ```
-
+path:
+  dummy:
+    respones:
+      200:
+        description: dummy
+        
 components:
   schemas:
     FeatureCollectionType:
