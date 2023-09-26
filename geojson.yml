@@ -42,7 +42,7 @@ info:
             type: boolean
       ```
 paths:
-  dummy:
+  /dummy:
     respones:
       200:
         description: dummy
