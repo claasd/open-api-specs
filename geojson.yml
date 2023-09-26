@@ -41,7 +41,7 @@ info:
           someFlag:
             type: boolean
       ```
-path:
+paths:
   dummy:
     respones:
       200:
