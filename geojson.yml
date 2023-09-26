@@ -50,18 +50,17 @@ paths:
           description: dummy
 components:
   schemas:
-    FeatureCollectionType:
-      type: string
-      enum:
-        - FeatureCollection
-      default: FeatureCollection
-
-    FeatureType:
-      type: string
-      enum:
-        - Feature
-      default: Feature
-
+    FeatureCollection:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - FeatureCollection
+          default: FeatureCollection
+      required:
+        - type
+    
     Position:
       type: array
       minItems: 2
