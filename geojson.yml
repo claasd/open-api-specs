@@ -257,3 +257,27 @@ components:
       required:
         - type
         - geometry
+    BBox:
+      type: string
+      description: "a bounding box as comma seperated values, in the following order: left,bottom,right,top or  minLongitude, minLatitude, maxLongitude, maxLatitude"
+      example: "10.12345,50.12345,10.12346,50.12346"
+
+  parameters:
+    bbox:
+      name: bbox
+      in: query
+      required: false
+      schema:
+        $ref: "#/components/schemas/BBox"
+    bboxRequired:
+      name: bbox
+      in: query
+      required: true
+      schema:
+        $ref: "#/components/schemas/BBox"
+
+
+
+
+
+
